@@ -1,29 +1,29 @@
 var now = moment().format("hA")
-// console.log(now);
+console.log(now);
 let currentID;
 let inputID;
 let saveInput;
 let inputEL = document.getElementById(inputID);
 let time;
-let timeArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+let timeArr = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 let currentDate = moment().format("dddd, MMMM Do YYYY")
 $("#current-date").html(currentDate);
 
 for (i = 0; i < timeArr.length; i++){
 time = timeArr[i];
-    $ ('#mytable > tbody:last-child').append ('<tr class =' + time + '><td id =' + time + '>' + time + '</td><td><input type ="text" name ="' + time + '"  id ="text' + time + '"><button type="button" id = "'+time+'">Save Task</button>');
+time = moment('\"'+time+'\"', 'HH').format('hA');
+console.log(now > time);
+    $ ('#mytable > tbody:last-child').append ('<tr class =' + time + '><td  class = "time-display" id =' + time + '>' + time + '</td><td><input type ="text" name ="' + time + '"  id ="text' + time + '"><button type="button"  class="btn" id= "'+time+'">Save Task</button>');
     if (now > time){
-        $('.'+time).css("background-color", "grey");
-        $('input[name="'+time+'"]').css("background-color", "grey");
+    // if (now.isAfter(time)) {
+        $('input[name="'+time+'"]').css("background-color", "#cccccc");
     }
     else if ( now == time){
-        $('.'+time).css("background-color", "red");
-        $('input[name="'+time+'"]').css("background-color", "red");
+        $('input[name="'+time+'"]').css("background-color", "#f14d57");
     }
 
     else {
-        $('.'+time).css("background-color", "green");
-        $('input[name="'+time+'"]').css("background-color", "green");
+        $('input[name="'+time+'"]').css("background-color", "#74e96d");
     }
 
 
