@@ -19,7 +19,7 @@ time = moment('\"'+time+'\"', 'HH').format('hA');
     let TDc = $('<button type="button"  class="btn btn-outline-info" id= "'+time+'">Save Task</button>')
     $(row).append(TDa, TDb, TDc);
     $('#mytable').append(row);
-    // $ ('#mytable > tbody:last-child').append ('<tr class =' + time + '><td  class = "time-display" id =' + time + '>' + time + '</td><td><input type ="text" name ="' + time + '"  id ="text' + time + '"><button type="button"  class="btn" id= "'+time+'">Save Task</button></tr>');
+    
 
     if (now > time){
     $('input[name="'+time+'"]').css("background-color", "#cccccc");
