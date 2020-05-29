@@ -10,5 +10,8 @@ I would like to thank of all my teachers and TAs at University of Washington's C
 ## Deployment
 https://bmalkmus.github.io/dailyPlanner
 
+## Screenshot
+![Screenshot](WorkdayPlan.png)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
